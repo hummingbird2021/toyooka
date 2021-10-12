@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="jbingo.css">
+    <title>ホーム画面/Hummingbird</title>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+function slideSwitch() {
+   var $active = $('#slideshow img.active');
+
+   if ( $active.length == 0 ) $active = $('#slideshow img:last');
+
+   var $next =  $active.next().length ? $active.next()
+      : $('#slideshow img:first');
+
+   $active.addClass('last-active');
+
+   $next.css({opacity: 0.0})
+      .addClass('active')
+      .animate({opacity: 1.0}, 1000, function() {
+           $active.removeClass('active last-active');
+      });
+}
+
+$(function() {
+   setInterval( "slideSwitch()", 5000 );
+});
+</script>
+  </head>
+  <body>
+  <body bgcolor="white" text="black">
+
+  <a href="jbingo.html">
+  <img src="mainicon.png" alt="mainicon" title="mainicon"width="400" height="100"></a>
+
+  <div style="position:absolute; top:10px; left:520px;">
+  <h1>Hummingbird</h1></div>
+
+
+<div style="position:absolute; top:80px; left:1050px;">
+  <form method="get" action="http://www.google.co.jp/search" target="_blank">
+  <input type="text" name="q" size="31" maxlength="255" value="">
+  <input type="submit" name="btng" value="検索">
+  <input type="hidden" name="hl" value="ja">
+  <input type="hidden" name="sitesearch" value="cc.aoyama.ac.jp">
+  </form></div>
+
+  <a href="jbingo.html">
+  <div style="position:absolute; top:20px; left:845px;"><img src="home.png" alt="home" title="home"width="200" height="50"></div></a>
+
+  <p><div style="position:absolute; top:270px; left:620px;">
+    <h3><u>紹介</u></h3></p></div>
+
+
+  <p><div style="position:absolute; top:360px; left:600px;">
+  <h8>豊岡の観光地一覧</h8></p></div>
+
+　<a href="2021.7.14.html">
+      <div style="position:absolute; top:400px; left:300px;">
+      <img src="front.png" alt="tokuteikadai" title=とど兵
+""width="260" height="260"></div></a>
+
+　<a href="2ndgrade.html">
+      <div style="position:absolute; top:400px; left:620px;">
+      <img src="2ndgrade.png" alt="tokuteikadai" title=竹野
+""width="260" height="260"></div></a>
+  
+
+　<a href="2021start.html">
+      <div style="position:absolute; top:400px; left:940px;">
+      <img src="2021start.png" alt="tokuteikadai" title夕日が浦
+""width="280" height="260"></div></a>
+
+
+  </body>
+</html>
